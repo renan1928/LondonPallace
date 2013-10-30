@@ -25,9 +25,9 @@ return array(
             // module. Simply drop new controllers in, and you can access them
             // using the path /application/:controller/:action
             'application' => array(
-                'type'    => 'Literal',
+                'type'    => 'Segment',
                 'options' => array(
-                    'route'    => '/application',
+                    'route'    => '',
                     'defaults' => array(
                         '__NAMESPACE__' => 'Application\Controller',
                         'controller'    => 'Index',
@@ -73,7 +73,10 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+            'Application\Controller\Cadastro' => 'Application\Controller\CadastroController',
+            'Application\Controller\Suites' => 'Application\Controller\SuitesController',
+            'Application\Controller\Servicos' => 'Application\Controller\ServicosController'
         ),
     ),
     'view_manager' => array(

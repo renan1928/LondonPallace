@@ -1,6 +1,6 @@
 <?php echo $this->doctype(); ?>
 
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <?php echo $this->headTitle('ZF2 '. $this->translate('Skeleton Application'))->setSeparator(' - ')->setAutoEscape(false) ?>
@@ -13,43 +13,143 @@
         <!-- Le styles -->
         <?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
                         ->prependStylesheet($this->basePath() . '/css/style.css')
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap-theme.min.css')
-                        ->prependStylesheet($this->basePath() . '/css/bootstrap.min.css') ?>
+                        ->prependStylesheet($this->basePath() . '/css/forms.css')
+                        ->prependStylesheet($this->basePath() . '/css/skel-noscript.css')
+                        ->prependStylesheet($this->basePath() . '/css/style-desktop.css') ?>
 
         <!-- Scripts -->
         <?php echo $this->headScript()
+            ->prependFile($this->basePath() . '/js/config.js')
+            ->prependFile($this->basePath() . '/js/jquery-ajaxLink.js')
             ->prependFile($this->basePath() . '/js/bootstrap.min.js')
-            ->prependFile($this->basePath() . '/js/jquery.min.js')
+            ->prependFile($this->basePath() . '/js/jquery.js')
+            ->prependFile($this->basePath() . '/js/skel-panels.min.js')
+            ->prependFile($this->basePath() . '/js/skel.min.js')
             ->prependFile($this->basePath() . '/js/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
             ->prependFile($this->basePath() . '/js/html5shiv.js',   'text/javascript', array('conditional' => 'lt IE 9',))
-        ; ?>
-
+        ; ?>    
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie9.css" /><![endif]-->
+        
     </head>
     <body>
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><img src="<?php echo $this->basePath('img/zf2-logo.png') ?>" alt="Zend Framework 2"/>&nbsp;<?php echo $this->translate('Skeleton Application') ?></a>
+        
+        <!-- Header -->
+            <div id="header-wrapper">
+                <header id="header" class="container" style="position:relative;">
+                    <div class="row">
+                        <div class="12u">
+                        
+                            <!-- Logo -->
+                                <h1><a href="/" id="logo">London Pallace</a></h1>
+                            
+                            <!-- Nav -->
+                                <nav id="nav">
+                                    <a href="/">Homepage</a>
+                                    <a href="/servicos">Serviços</a>
+                                    <a href="/suites">Suítes</a>
+                                    <a href="/cadastro">Cadastro</a>
+                                    <a href="/login" class="fadeLogin">Login</a>
+                                </nav>
+                        </div>
+                    </div>
+                </header>
+
+        <div id="login" style="display:none;">
+            <div class="arrow-up"></div>
+            <div class="2u login-pop-up">
+                <div class="9u" style="padding-top:10%; margin:auto;">
+                    <input type="text" id="cad-user" class="form-input-login inp-user" placeholder="Usuário">
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
-                    </ul>
-                </div><!--/.nav-collapse -->
+                <div class="9u" style="margin:auto;">
+                    <input type="text" id="cad-senha" class="form-input-login inp-senha" placeholder="Senha">
+                </div>
+                <div class="9u" style="margin:auto; padding-bottom:10%;">
+                    <input type="button" id="login-enviar" class="button-entrar" value="Entrar">
+                </div>
             </div>
-        </nav>
+        </div>
+            
         <div class="container">
             <?php echo $this->content; ?>
-            <hr>
-            <footer>
-                <p>&copy; 2005 - <?php echo date('Y') ?> by Zend Technologies Ltd. <?php echo $this->translate('All rights reserved.') ?></p>
-            </footer>
-        </div> <!-- /container -->
-        <?php echo $this->inlineScript() ?>
+        </div>
+
+        <!-- Footer -->
+            <div id="footer-wrapper">
+                <footer id="footer" class="container">
+                    <div class="row">
+                        <div class="8u">
+                        
+                            <!-- Links -->
+                                <section>
+                                    <h2>Links to Important Stuff</h2>
+                                    <div>
+                                        <div class="row">
+                                            <div class="3u">
+                                                <ul class="link-list last-child">
+                                                    <li><a href="#">Neque amet dapibus</a></li>
+                                                    <li><a href="#">Sed mattis quis rutrum</a></li>
+                                                    <li><a href="#">Accumsan suspendisse</a></li>
+                                                    <li><a href="#">Eu varius vitae magna</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="3u">
+                                                <ul class="link-list last-child">
+                                                    <li><a href="#">Neque amet dapibus</a></li>
+                                                    <li><a href="#">Sed mattis quis rutrum</a></li>
+                                                    <li><a href="#">Accumsan suspendisse</a></li>
+                                                    <li><a href="#">Eu varius vitae magna</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="3u">
+                                                <ul class="link-list last-child">
+                                                    <li><a href="#">Neque amet dapibus</a></li>
+                                                    <li><a href="#">Sed mattis quis rutrum</a></li>
+                                                    <li><a href="#">Accumsan suspendisse</a></li>
+                                                    <li><a href="#">Eu varius vitae magna</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="3u">
+                                                <ul class="link-list last-child">
+                                                    <li><a href="#">Neque amet dapibus</a></li>
+                                                    <li><a href="#">Sed mattis quis rutrum</a></li>
+                                                    <li><a href="#">Accumsan suspendisse</a></li>
+                                                    <li><a href="#">Eu varius vitae magna</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                        </div>
+                        <div class="4u">
+                            
+                            <!-- Blurb -->
+                                <section>
+                                    <h2>An Informative Text Blurb</h2>
+                                    <p>
+                                        Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. Suspendisse eu 
+                                        varius nibh. Suspendisse vitae magna eget odio amet mollis. Duis neque nisi, 
+                                        dapibus sed mattis quis, sed rutrum accumsan sed. Suspendisse eu varius nibh 
+                                        lorem ipsum amet dolor sit amet lorem ipsum consequat gravida justo mollis.
+                                    </p>
+                                </section>
+                        
+                        </div>
+                    </div>
+                </footer>
+            </div>
+
+        <!-- Copyright -->
+            <div id="copyright">
+                &copy; London Pallace. Todos os direitos reservados. | UNIFIEO | <a href="#">TADS</a>
+            </div>
     </body>
 </html>
+<script>
+$(document).ready(function() {
+    $('.fadeLogin').ajaxLink(); 
+    $('.fadeLogin').click(function() {
+        $('#login').fadeToggle();
+    });
+})
+</script>

@@ -1,0 +1,222 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200);
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+
+
+
+/*********************************************************************************/
+/* CSS - Formulário                                                                        */
+/*********************************************************************************/
+
+/* Basic */
+
+/*************************************************************************************/
+/* FORMATAÇÃO INPUTS & BOTÕES :)													 */
+/*************************************************************************************/
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus 
+{
+  border-color: rgba(44, 62, 80,0.7);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80,0.7);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80,0.7);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(44, 62, 80,0.7);
+}
+
+.form-input-text
+{
+	margin-bottom: 10px;
+	border: 1px solid #CCC;
+	padding: 15px;
+	color: #6C595F;
+	-webkit-box-shadow:inset 1px 1px 2px #999;
+	-moz-box-shadow:inset 1px 1px 2px #999;
+	-khtml-box-shadow:inset 1px 1px 2px #999;
+	box-shadow:inset 1px 1px 2px #999;
+	-webkit-transition: border 0.4s ease-out;
+	-webkit-transition:-webkit-transform .2s ease-in;
+}
+.form-input-login
+{
+	margin-bottom: 10px;
+	border: 1px solid #CCC;
+	padding: 5px;
+	width:100%;
+	color: #6C595F;
+	-webkit-box-shadow:inset 1px 1px 2px #999;
+	-moz-box-shadow:inset 1px 1px 2px #999;
+	-khtml-box-shadow:inset 1px 1px 2px #999;
+	box-shadow:inset 1px 1px 2px #999;
+	-webkit-transition: border 0.4s ease-out;
+	-webkit-transition:-webkit-transform .2s ease-in;
+}
+
+.inp-bairro, .inp-numero, .inp-cidade, 
+.inp-estado, .inp-nome, .inp-cpf, .inp-email, 
+.inp-telefone, .inp-celular, .inp-end, .inp-cep, .inp-user { 
+	width: 100%;
+}
+
+.inp-sexo { width: 100%; background: white; padding-bottom: 25px; color:#95a5a6;}
+
+.form-input-text:hover
+{
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+}
+.form-input-text:focus  
+{
+	outline: none;
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	
+}
+
+.btenviar , .btlimpar , .btorcamento
+{
+	width:110px;
+	height:40px;
+	background: rgba(22, 160, 133,0.8);
+	font-family:"RBNo2Light", Calibri, Tahoma, Geneva, sans-serif;
+	color:rgba(236, 240, 241,1.0);
+	font-size:30px;
+	font-weight:300;
+	text-align:center;
+	padding: 5px 15px;	
+	border: none;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	border-radius:4px;
+	float: right;
+	margin-right:45px;
+	-webkit-transition: background 0.4s ease-out;
+	cursor: pointer;
+}
+
+.btenviar:hover , .btorcamento:hover
+{
+	background: rgba(22, 160, 133,1.0);
+}
+
+.btorcamento
+{
+	padding-right:102px;
+}
+
+.btlimpar
+{
+	margin-right:15px;
+	background:rgba(44, 62, 80,0.8);
+}
+
+.btlimpar:hover
+{
+	background:rgba(44, 62, 80,1.0)
+}
+
+.limite /*Contador do TextArea :)*/
+{
+	font-family:"RBNo2Light", Calibri, Tahoma, Geneva, sans-serif;
+	font-size:21px;
+	font-weight:300;
+	color:rgba(26, 188, 156,1.0);
+	float:right;
+}
+
+
+.button-enviar, .button-entrar
+	{
+		display: inline-block;
+		background: #ed391b;
+		color: #fff;
+		text-decoration: none;
+		font-size: 1.75em;
+		font-weight: 300;
+		padding: 10px 40px 10px 40px;
+		outline: 0;
+		border-radius: 10px;
+		box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75), inset 0px 2px 0px 0px rgba(255,192,192,0.5), inset 0px 0px 0px 2px rgba(255,96,96,0.85), 3px 3px 3px 1px rgba(0,0,0,0.15);
+		background-image: -moz-linear-gradient(top, #ed391b, #ce1a00);
+		background-image: -webkit-linear-gradient(top, #ed391b, #ce1a00);
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ed391b), to(#ce1a00));
+		background-image: -ms-linear-gradient(top, #ed391b, #ce1a00);
+		background-image: -o-linear-gradient(top, #ed391b, #ce1a00);
+		background-image: linear-gradient(top, #ed391b, #ce1a00);
+		text-shadow: -1px -1px 1px rgba(0,0,0,0.5);
+	}
+
+	.button-entrar {
+		padding: 5px 20px 5px 20px;
+		font-size: 1.25em;
+		position: relative;
+		width:100%;
+	}
+
+	.button-enviar:hover , .button-entrar:hover
+	{
+		background: #fd492b;
+		box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75), inset 0px 2px 0px 0px rgba(255,192,192,0.5), inset 0px 0px 0px 2px rgba(255,96,96,0.85), 3px 3px 3px 1px rgba(0,0,0,0.15);
+		background-image: -moz-linear-gradient(top, #fd492b, #de2a10);
+		background-image: -webkit-linear-gradient(top, #fd492b, #de2a10);
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fd492b), to(#de2a10));
+		background-image: -ms-linear-gradient(top, #fd492b, #de2a10);
+		background-image: -o-linear-gradient(top, #fd492b, #de2a10);
+		background-image: linear-gradient(top, #fd492b, #de2a10);
+	}
+
+	.button-enviar:active, .button-entrar:active
+	{
+		background: #ce1a00;
+		box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.75), inset 0px 2px 0px 0px rgba(255,192,192,0.5), inset 0px 0px 0px 2px rgba(255,96,96,0.85), 3px 3px 3px 1px rgba(0,0,0,0.15);
+		background-image: -moz-linear-gradient(top, #ce1a00, #ed391b);
+		background-image: -webkit-linear-gradient(top, #ce1a00, #ed391b);
+		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ce1a00), to(#ed391b));
+		background-image: -ms-linear-gradient(top, #ce1a00, #ed391b);
+		background-image: -o-linear-gradient(top, #ce1a00, #ed391b);
+		background-image: linear-gradient(top, #ce1a00, #ed391b);
+	}
+
+	.login-pop-up {
+		z-index:5; 
+		height:auto; 
+		position:absolute; 
+		margin-left:81%; 
+		background: #3B4346 url('images/bg01.jpg');
+	}
+
+	.erro {
+		font-family: "Arial", verdana, sans-serif;
+		color: red;
+		font-size:0.85em;
+	}
+
+	.arrow-up {
+	z-index: 6;
+	position: absolute;
+	margin-left: 93.3%;
+	margin-top: -1.18%;
+	width: 0; 
+	height: 0; 
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid #3B4346;
+	}
